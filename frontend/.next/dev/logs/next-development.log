@@ -1,0 +1,182 @@
+[00:00:01.770] Server  LOG     ✓ Ready in 1322ms
+[00:00:15.704] Server  LOG     ○ Compiling / ...
+[00:00:21.235] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:21.757] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <IntelligencePanel className="hidden w-8...">
+      <div className="h-full fle...">
+        <div>
+        <_c className="flex-1 p-4">
+          <ScrollArea ref={null} className="relative o...">
+            <ScrollAreaProvider scope={undefined} type="hover" dir="ltr" scrollHideDelay={600} scrollArea={null} ...>
+              <Primitive.div dir="ltr" className="relative o..." ref={function} style={{position:"...", ...}}>
+                <div dir="ltr" className="relative o..." style={{position:"...", ...}} ref={function}>
+                  <ScrollAreaViewport className="h-full w-f...">
+                    <style>
+                    <Primitive.div data-radix-scroll-area-viewport="" className="h-full w-f..." ref={function} ...>
+                      <div data-radix-scroll-area-viewport="" className="h-full w-f..." style={{...}} ref={function}>
+                        <div ref={function bound dispatchSetState} style={{minWidth:"...", ...}}>
+                          <div className="space-y-4 ...">
+                            <div className="bg-muted/5...">
+                              <div className="flex items...">
+                                <Zap>
+                                <span>
++                                 8:01:58 PM
+-                                 20:01:56
+                              ...
+                  ...
+
+[00:01:22.210] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:24.510] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:24.674] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <IntelligencePanel className="hidden w-8...">
+      <div className="h-full fle...">
+        <div>
+        <_c className="flex-1 p-4">
+          <ScrollArea ref={null} className="relative o...">
+            <ScrollAreaProvider scope={undefined} type="hover" dir="ltr" scrollHideDelay={600} scrollArea={null} ...>
+              <Primitive.div dir="ltr" className="relative o..." ref={function} style={{position:"...", ...}}>
+                <div dir="ltr" className="relative o..." style={{position:"...", ...}} ref={function}>
+                  <ScrollAreaViewport className="h-full w-f...">
+                    <style>
+                    <Primitive.div data-radix-scroll-area-viewport="" className="h-full w-f..." ref={function} ...>
+                      <div data-radix-scroll-area-viewport="" className="h-full w-f..." style={{...}} ref={function}>
+                        <div ref={function bound dispatchSetState} style={{minWidth:"...", ...}}>
+                          <div className="space-y-4 ...">
+                            <div className="bg-muted/5...">
+                              <div className="flex items...">
+                                <Zap>
+                                <span>
++                                 8:03:01 PM
+-                                 20:01:56
+                              ...
+                  ...
+
+[00:01:27.268] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:28.807] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:28.961] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <IntelligencePanel className="hidden w-8...">
+      <div className="h-full fle...">
+        <div>
+        <_c className="flex-1 p-4">
+          <ScrollArea ref={null} className="relative o...">
+            <ScrollAreaProvider scope={undefined} type="hover" dir="ltr" scrollHideDelay={600} scrollArea={null} ...>
+              <Primitive.div dir="ltr" className="relative o..." ref={function} style={{position:"...", ...}}>
+                <div dir="ltr" className="relative o..." style={{position:"...", ...}} ref={function}>
+                  <ScrollAreaViewport className="h-full w-f...">
+                    <style>
+                    <Primitive.div data-radix-scroll-area-viewport="" className="h-full w-f..." ref={function} ...>
+                      <div data-radix-scroll-area-viewport="" className="h-full w-f..." style={{...}} ref={function}>
+                        <div ref={function bound dispatchSetState} style={{minWidth:"...", ...}}>
+                          <div className="space-y-4 ...">
+                            <div className="bg-muted/5...">
+                              <div className="flex items...">
+                                <Zap>
+                                <span>
++                                 8:03:05 PM
+-                                 20:01:56
+                              ...
+                  ...
+
+[00:02:35.523] Browser ERROR   `DialogContent` requires a `DialogTitle` for the component to be accessible for screen reader users.
+
+If you want to hide the `DialogTitle`, you can wrap it with our VisuallyHidden component.
+
+For more information, see https://radix-ui.com/primitives/docs/components/dialog
+[00:02:35.523] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[00:02:35.523] Browser ERROR   `DialogContent` requires a `DialogTitle` for the component to be accessible for screen reader users.
+
+If you want to hide the `DialogTitle`, you can wrap it with our VisuallyHidden component.
+
+For more information, see https://radix-ui.com/primitives/docs/components/dialog
+[00:02:35.523] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[00:02:41.006] Browser ERROR   `DialogContent` requires a `DialogTitle` for the component to be accessible for screen reader users.
+
+If you want to hide the `DialogTitle`, you can wrap it with our VisuallyHidden component.
+
+For more information, see https://radix-ui.com/primitives/docs/components/dialog
+[00:02:41.006] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[00:02:41.006] Browser ERROR   `DialogContent` requires a `DialogTitle` for the component to be accessible for screen reader users.
+
+If you want to hide the `DialogTitle`, you can wrap it with our VisuallyHidden component.
+
+For more information, see https://radix-ui.com/primitives/docs/components/dialog
+[00:02:41.006] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[00:03:20.287] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:03:20.485] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <IntelligencePanel className="hidden w-8...">
+      <div className="h-full fle...">
+        <div>
+        <_c className="flex-1 p-4">
+          <ScrollArea ref={null} className="relative o...">
+            <ScrollAreaProvider scope={undefined} type="hover" dir="ltr" scrollHideDelay={600} scrollArea={null} ...>
+              <Primitive.div dir="ltr" className="relative o..." ref={function} style={{position:"...", ...}}>
+                <div dir="ltr" className="relative o..." style={{position:"...", ...}} ref={function}>
+                  <ScrollAreaViewport className="h-full w-f...">
+                    <style>
+                    <Primitive.div data-radix-scroll-area-viewport="" className="h-full w-f..." ref={function} ...>
+                      <div data-radix-scroll-area-viewport="" className="h-full w-f..." style={{...}} ref={function}>
+                        <div ref={function bound dispatchSetState} style={{minWidth:"...", ...}}>
+                          <div className="space-y-4 ...">
+                            <div className="bg-muted/5...">
+                              <div className="flex items...">
+                                <Zap>
+                                <span>
++                                 8:04:57 PM
+-                                 20:01:56
+                              ...
+                  ...
+
+[00:07:41.656] Server  LOG     ✓ Compiled in 108ms
+[00:07:51.124] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:07:52.984] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:09:55.385] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:09:56.865] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:09:57.377] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
