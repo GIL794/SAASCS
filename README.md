@@ -153,11 +153,11 @@ Error paths are recorded as `ERROR` entries.
 ![ZeroLag Screenshot 10](docs/images/WhatsApp%20Image%202026-02-28%20at%2019.38.09.jpeg)
 ![ZeroLag Screenshot 11](docs/images/WhatsApp%20Image%202026-02-28%20at%2019.38.47.jpeg)
 
-## Demo Script (Suggested)
+## Demo Steps
 
 1. Open dashboard and show pending shipments.
 2. Trigger a delivery event from simulator or dashboard action.
 3. Watch AI decision in real time in event log stream.
 4. Show payment submission + confirmation entries.
-5. (Optional) demonstrate FX path with StableFX settings.
+
 
