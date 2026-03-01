@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Modern Navy Theme — CSS Custom Properties ─────────────────────────────── */
+@layer base {
+  :root {
+    /* Light mode — clean white with navy accents */
+    --background:        210 40% 98%;
+    --foreground:        222 47% 11%;
+
+    --card:              0 0% 100%;
+    --card-foreground:   222 47% 11%;
+
+    --popover:           0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary:           217 91% 45%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary:         210 40% 93%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted:             210 40% 93%;
+    --muted-foreground:  215 20% 45%;
+
+    --accent:            199 89% 40%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive:       0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border:            214 32% 85%;
+    --input:             214 32% 85%;
+    --ring:              217 91% 45%;
+
+    --radius:            0.5rem;
+
+    /* Light sidebar — clean white with navy accents */
+    --sidebar-bg:        0 0% 100%;
+    --sidebar-fg:        222 47% 20%;
+    --sidebar-border:    214 32% 88%;
+    --sidebar-accent:    217 91% 45%;
+    --sidebar-muted:     215 20% 52%;
+    --sidebar-hover-bg:  210 40% 96%;
+    --sidebar-active-bg: 217 91% 94%;
+  }
+
+  .dark {
+    /* Dark mode — deep navy */
+    --background:        222 47% 6%;
+    --foreground:        210 40% 98%;
+
+    --card:              222 47% 9%;
+    --card-foreground:   210 40% 98%;
+
+    --popover:           222 47% 9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary:           217 91% 60%;
+    --primary-foreground: 222 47% 6%;
+
+    --secondary:         217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted:             217 33% 17%;
+    --muted-foreground:  215 20% 65%;
+
+    --accent:            199 89% 48%;
+    --accent-foreground: 222 47% 6%;
+
+    --destructive:       0 62% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border:            217 33% 20%;
+    --input:             217 33% 20%;
+    --ring:              217 91% 60%;
+
+    /* Dark sidebar — deep navy */
+    --sidebar-bg:        222 47% 8%;
+    --sidebar-fg:        210 40% 88%;
+    --sidebar-border:    217 33% 16%;
+    --sidebar-accent:    217 91% 62%;
+    --sidebar-muted:     215 20% 52%;
+    --sidebar-hover-bg:  217 33% 14%;
+    --sidebar-active-bg: 217 33% 18%;
+  }
+}
+
+/* ── Base resets ────────────────────────────────────────────────────────────── */
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom scrollbar — navy themed */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-muted/30;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-border rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground/50;
+  }
+}
+
+/* ── Utility classes ────────────────────────────────────────────────────────── */
+@layer utilities {
+  /* Glass morphism card */
+  .glass-card {
+    @apply bg-card/80 backdrop-blur-sm border border-border/50;
+  }
+
+  /* Navy gradient background */
+  .navy-bg {
+    background: linear-gradient(135deg, hsl(222, 47%, 6%) 0%, hsl(217, 33%, 12%) 100%);
+  }
+
+  /* Glow effect on primary elements */
+  .glow-primary {
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.3);
+  }
+
+  /* Shimmer loading animation */
+  .shimmer {
+    background: linear-gradient(
+      90deg,
+      hsl(var(--muted)) 0%,
+      hsl(var(--muted-foreground) / 0.1) 50%,
+      hsl(var(--muted)) 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.5s linear infinite;
+  }
+
+  /* Status dot */
+  .status-dot {
+    @apply inline-block w-2 h-2 rounded-full;
+  }
+
+  /* Monospace text for hashes/IDs */
+  .mono {
+    @apply font-mono text-xs tracking-tight;
+  }
+
+  /* Sidebar nav item — fully theme-aware */
+  .nav-item {
+    @apply flex items-center gap-3 px-3 py-2 rounded-md text-sm font-medium
+           transition-all duration-150 cursor-pointer;
+    color: hsl(var(--sidebar-fg));
+  }
+  .nav-item:hover {
+    background-color: hsl(var(--sidebar-hover-bg));
+    color: hsl(var(--sidebar-fg));
+  }
+  .nav-item-active {
+    background-color: hsl(var(--sidebar-active-bg));
+    color: hsl(var(--sidebar-accent));
+    font-weight: 600;
+  }
+
+  /* Log entry type badges */
+  .log-badge-event    { @apply bg-blue-500/20 text-blue-300 border-blue-500/30; }
+  .log-badge-decision { @apply bg-violet-500/20 text-violet-300 border-violet-500/30; }
+  .log-badge-payment  { @apply bg-emerald-500/20 text-emerald-300 border-emerald-500/30; }
+  .log-badge-confirm  { @apply bg-cyan-500/20 text-cyan-300 border-cyan-500/30; }
+  .log-badge-fx       { @apply bg-amber-500/20 text-amber-300 border-amber-500/30; }
+  .log-badge-error    { @apply bg-red-500/20 text-red-300 border-red-500/30; }
+}
+
+/* ── Animations ─────────────────────────────────────────────────────────────── */
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position:  200% 0; }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slide-in-right {
+  from { transform: translateX(100%); }
+  to   { transform: translateX(0); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 hsl(var(--primary) / 0.4); }
+  50%       { box-shadow: 0 0 0 8px hsl(var(--primary) / 0); }
+}
+
+.animate-fade-in      { animation: fade-in 0.3s ease-out both; }
+.animate-slide-right  { animation: slide-in-right 0.3s ease-out both; }
+.animate-pulse-glow   { animation: pulse-glow 2s ease-in-out infinite; }

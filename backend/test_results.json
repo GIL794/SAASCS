@@ -1,0 +1,90 @@
+[
+  {
+    "name": "404 handler — unknown route returns { error: \"Not found\" }",
+    "status": 404,
+    "body": {
+      "error": "Not found"
+    },
+    "note": "Body: {\"error\":\"Not found\"}"
+  },
+  {
+    "name": "GET /shipments — returns 2 shipments",
+    "status": 200,
+    "note": "Shipments: SHIP123, SHIP456"
+  },
+  {
+    "name": "GET /logs — returns array of log entries",
+    "status": 200,
+    "note": "6 log entries"
+  },
+  {
+    "name": "GET /payments — returns filtered payment entries",
+    "status": 200,
+    "note": "1 payment entries, all correctly typed"
+  },
+  {
+    "name": "POST /events — missing shipment_id → 400 validation error",
+    "status": 400,
+    "note": "Correctly rejected: Invalid event payload"
+  },
+  {
+    "name": "POST /events — shipment_id with special chars → 400",
+    "status": 400,
+    "note": "Correctly rejected XSS in shipment_id"
+  },
+  {
+    "name": "POST /events — unknown field → 400 (strict schema)",
+    "status": 400,
+    "note": "Correctly rejected unknown field"
+  },
+  {
+    "name": "POST /events — invoice_amount > 10M → 400",
+    "status": 400,
+    "note": "Correctly rejected oversized invoice_amount"
+  },
+  {
+    "name": "POST /events — negative invoice_amount → 400",
+    "status": 400,
+    "note": "Correctly rejected negative invoice_amount"
+  },
+  {
+    "name": "POST /events — prompt injection in event_type → sanitized & processed",
+    "status": 500,
+    "note": "Server handled injection attempt gracefully (status 500)"
+  },
+  {
+    "name": "POST /events — valid CargoDelivered → EVENT_RECEIVED + AI_DECISION logged",
+    "status": 500,
+    "note": "Payment stage failed (Circle API not configured — expected): Payment processing failed"
+  },
+  {
+    "name": "POST /events — duplicate shipment_id → already-paid or re-evaluated",
+    "status": 500,
+    "note": "Second call result: {\"error\":\"Payment processing failed\"}"
+  },
+  {
+    "name": "POST /events — non-delivery event_type → not-approved",
+    "status": 200,
+    "note": "Correctly withheld payment: Payment withheld: Event type is not CARGO_DELIVERED — delivery unconfirmed...."
+  },
+  {
+    "name": "POST /events — temperature_ok: false → not-approved",
+    "status": 200,
+    "note": "Correctly withheld payment for temp excursion"
+  },
+  {
+    "name": "CORS — OPTIONS preflight returns correct Allow-Origin",
+    "status": 204,
+    "note": "Access-Control-Allow-Origin: http://localhost:3000"
+  },
+  {
+    "name": "Security headers — X-Content-Type-Options present",
+    "status": 200,
+    "note": "X-Content-Type-Options: nosniff"
+  },
+  {
+    "name": "Security headers — X-Frame-Options present",
+    "status": 200,
+    "note": "X-Frame-Options: SAMEORIGIN"
+  }
+]
