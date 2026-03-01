@@ -1,0 +1,14 @@
+[
+  {
+    "shipment_id": "SHIP123",
+    "buyer_id": "BUYER001",
+    "supplier_id": "SUPPLIER001",
+    "delivery_location": "London, UK"
+  },
+  {
+    "shipment_id": "SHIP456",
+    "buyer_id": "BUYER002",
+    "supplier_id": "SUPPLIER002",
+    "delivery_location": "Madrid, Spain"
+  }
+]
