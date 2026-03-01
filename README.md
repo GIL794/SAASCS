@@ -32,6 +32,12 @@ Live Dashboard (Next.js)
   - payment status
 ```
 
+## Demo Video
+
+<video src="docs/images/Recording%202026-03-01%20102312.mp4" controls width="100%"></video>
+
+Direct link: [Watch or download the demo video (Google Drive)](https://drive.google.com/file/d/1fO9vmxapg6Fekw91hBb0BoTCUNCyqGpK/view?usp=sharing)
+
 ## Repository Structure
 
 - `backend/` — agent service, payment orchestration, simulator, config, logs.
